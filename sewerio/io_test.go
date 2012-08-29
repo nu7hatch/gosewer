@@ -1,11 +1,11 @@
-package iolog
+package sewerio
 
 import (
 	sewer "github.com/nu7hatch/gosewer"
-	"time"
+	"os"
 )
 
 func ExampleFilter() {
-	sewer.AddFilter("hello", Filter)
+	sewer.AddFilter("hello", NewFilter(os.Stderr))
 	sewer.Log("hello", "foo", "bar")
 }

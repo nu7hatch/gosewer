@@ -1,6 +1,9 @@
 package sewer
 
-import "time"
+import (
+	"time"
+	"encoding/json"
+)
 
 type Message struct {
 	Event   string
@@ -18,4 +21,12 @@ func NewMessage(event string, args []interface{}) *Message {
 		}
 	}
 	return &Message{event, payload, time.Now()}
+}
+
+func (self *Message) MarshalJSON() (b []byte, err error) {
+	b, err = json.Marshal(map[string]interface{}{
+		"stamp":   self.Stamp.Unix(),
+		"payload": self.Payload,
+	})
+	return
 }

@@ -1,10 +1,10 @@
-package iolog
+package sewerio
 
 import (
+	"encoding/json"
+	"fmt"
 	sewer "github.com/nu7hatch/gosewer"
 	"io"
-	"fmt"
-	"encoding/json"
 	"time"
 )
 
