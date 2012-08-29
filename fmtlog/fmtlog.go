@@ -1,9 +1,9 @@
 package fmtlog
 
 import (
-	sewer "github.com/nu7hatch/gosewer"
-	"fmt"
 	"encoding/json"
+	"fmt"
+	sewer "github.com/nu7hatch/gosewer"
 	"time"
 )
 

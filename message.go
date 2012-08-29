@@ -11,7 +11,7 @@ type Message struct {
 func NewMessage(event string, args []interface{}) *Message {
 	argc := len(args)
 	i, payload := 0, make(map[string]interface{})
-	if argc % 2 == 0 {
+	if argc%2 == 0 {
 		for i < argc {
 			payload[args[i].(string)] = args[i+1]
 			i += 2
