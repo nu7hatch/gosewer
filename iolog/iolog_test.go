@@ -1,11 +1,11 @@
-package fmtlog
+package iolog
 
 import (
 	sewer "github.com/nu7hatch/gosewer"
 	"time"
 )
 
-func ExampleFmtLog() {
-	sewer.AddFilter("hello", FmtLog)
+func ExampleFilter() {
+	sewer.AddFilter("hello", Filter)
 	sewer.Log("hello", "foo", "bar")
 }
